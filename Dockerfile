@@ -4,7 +4,7 @@ RUN npm install pm2 -g
 RUN npm install -g npm-run-all
 RUN apk --no-cache add curl
 RUN apk add --no-cache bash
-RUN apk add --no-cache unzip
+RUN apk add --no-cache tar
 
 ENV SUPERCRONIC_URL=https://github.com/aptible/supercronic/releases/download/v0.1.8/supercronic-linux-amd64 \
     SUPERCRONIC=supercronic-linux-amd64 \
