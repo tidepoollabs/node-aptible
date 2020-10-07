@@ -2,6 +2,7 @@ FROM node:12-alpine
 
 RUN npm install pm2 -g
 RUN npm install -g npm-run-all
+RUN npm install -g lerna
 RUN apk --no-cache add curl
 RUN apk add --no-cache bash
 RUN apk add --no-cache tar
