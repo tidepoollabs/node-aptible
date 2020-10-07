@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM node:12
 
 RUN npm install pm2 -g
 RUN npm install -g npm-run-all
