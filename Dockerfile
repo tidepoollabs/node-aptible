@@ -1,10 +1,12 @@
-FROM node:12-alpine
+FROM node:12
 
+RUN apt-get -y update && \
+    apt-get install -y --no-install-recommends \
+    curl
 RUN npm install pm2 -g
 RUN npm install -g npm-run-all
 RUN npm install -g lerna
-RUN apk --no-cache add curl
-RUN apk add --no-cache bash
+
 
 ENV SUPERCRONIC_URL=https://github.com/aptible/supercronic/releases/download/v0.1.8/supercronic-linux-amd64 \
     SUPERCRONIC=supercronic-linux-amd64 \
