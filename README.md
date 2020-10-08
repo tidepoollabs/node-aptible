@@ -1,2 +1,2 @@
-### Node Alpine Image (12.18.4)
+### NodeJs Container for Aptible application
 This is specific configuration for running node application on Aptible
