@@ -8,7 +8,9 @@ RUN apt-get -y update && \
     curl -L https://github.com/sstephenson/ruby-build/archive/v20180329.tar.gz | tar -zxvf - -C /tmp/ && \
     cd /tmp/ruby-build-* && ./install.sh && cd / && \
     ruby-build -v 2.5.1 /usr/local && rm -rfv /tmp/ruby-build-*
-RUN npm install pm2 npm-run-all lerna -g
+RUN npm install pm2 -g
+RUN npm install -g npm-run-all
+RUN npm install -g lerna
 
 
 ENV SUPERCRONIC_URL=https://github.com/aptible/supercronic/releases/download/v0.1.8/supercronic-linux-amd64 \
